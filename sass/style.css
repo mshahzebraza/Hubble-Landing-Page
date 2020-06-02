@@ -1,0 +1,134 @@
+* {
+  /* ------------- Resetting css ------------- */
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: white;
+  font-size: 62.5%;
+}
+
+h1, h2 {
+  font-family: 'Poppins';
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrap {
+  padding: 1rem 1rem;
+}
+
+.imgContainer img {
+  max-width: 100%;
+}
+
+img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+button {
+  border: none;
+  font-size: .65rem;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  letter-spacing: .5px;
+  padding: .4rem 1.6rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  color: #00252e;
+}
+
+.logo {
+  width: 6.2rem;
+}
+
+header {
+  background-color: #ebfbff;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0 4.5rem;
+}
+
+header section.intro {
+  padding: 0 1rem;
+  text-align: center;
+}
+
+header section.intro > * {
+  margin-top: 4rem;
+}
+
+header section.intro .introText {
+  padding: 0 .2rem;
+}
+
+header section.intro .introText > * {
+  margin-top: 2rem;
+}
+
+header section.intro .introText .cta {
+  font-size: .7rem;
+  letter-spacing: .6px;
+  padding: .7rem 3rem;
+  background-color: #ff52bf;
+  color: white;
+}
+
+main .cardContainer .card {
+  border-radius: 1rem;
+  margin: 2.5rem 0;
+  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+main .cardContainer .card > * ~ * {
+  margin: 0 2rem;
+}
+
+main .cardContainer .card img {
+  width: 70%;
+  margin: 3rem auto 4rem;
+  margin-bottom: 2rem;
+}
+
+main .cardContainer .card h2 {
+  font-size: 1.2rem;
+}
+
+main .cardContainer .card p {
+  font-size: .9rem;
+  line-height: 1.4rem;
+  color: #808d99;
+}
+/*# sourceMappingURL=style.css.map */
