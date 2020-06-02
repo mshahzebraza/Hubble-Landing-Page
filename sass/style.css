@@ -109,16 +109,16 @@ main .cardContainer .card {
           box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
   text-align: center;
   overflow: hidden;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
-main .cardContainer .card > * ~ * {
-  margin: 0 2rem;
+main .cardContainer .card > * {
+  margin: 1rem 2rem;
 }
 
 main .cardContainer .card img {
-  width: 70%;
-  margin: 3rem auto 4rem;
+  margin: 1rem 0 0;
+  width: 90%;
   margin-bottom: 2rem;
 }
 
@@ -127,8 +127,31 @@ main .cardContainer .card h2 {
 }
 
 main .cardContainer .card p {
-  font-size: .9rem;
+  font-size: .88rem;
   line-height: 1.4rem;
   color: #808d99;
+}
+
+main .card.cardCta {
+  padding: 2rem 0;
+}
+
+main .card.cardCta h2 {
+  font-size: 1.1rem;
+  margin-right: 0;
+  margin-left: 0;
+  line-height: 1.5rem;
+}
+
+main .card.cardCta button {
+  background-color: #ff52bf;
+  color: #ebfbff;
+  font-size: .65rem;
+  padding: .8rem 2.5rem;
+}
+
+footer {
+  background-color: #00252e;
+  color: #ebfbff;
 }
 /*# sourceMappingURL=style.css.map */

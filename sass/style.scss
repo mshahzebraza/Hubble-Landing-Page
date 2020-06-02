@@ -125,16 +125,16 @@ main{
             text-align: center;
             overflow: hidden; 
             // padding-bottom: 1rem;
-            padding: 2rem 0;
+            padding: 1rem 0;
 
-            &>*~*{
-                margin: 0 2rem;
+            &>*{
+                margin: 1rem 2rem;
             }
             
             img{
-                // margin: 3rem 0;
-                width: 70%;
-                margin: 3rem auto 4rem;
+                margin: 1rem 0 0;
+                width: 90%;
+                // margin: 1rem auto 4rem;
 
                 margin-bottom: 2rem;
             }
@@ -143,7 +143,7 @@ main{
                 font-size: 1.2rem;
             }
             p{
-                font-size: .9rem;
+                font-size: .88rem;
                 line-height: 1.4rem;
                 color: $nuteC;
             }
@@ -152,6 +152,28 @@ main{
         
     }
 
-    .cardCta{}
+    .card.cardCta{
+        padding: 2rem 0;
+        
+        h2{
+            font-size: 1.1rem;
+            margin-right: 0;
+            margin-left: 0;
+            line-height: 1.5rem;
+        }
+
+        button{
+            background-color: $prime;
+            color: $nuteA;
+            font-size: .65rem;
+            padding: .8rem 2.5rem;
+        }
+
+    }
     
+}
+
+footer{
+    background-color: $nuteB;
+    color: $nuteA;
 }
