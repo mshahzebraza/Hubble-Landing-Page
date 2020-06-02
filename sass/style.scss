@@ -125,24 +125,25 @@ main{
             text-align: center;
             overflow: hidden; 
             // padding-bottom: 1rem;
-            padding: 1rem 0;
+            padding: 2rem 2.5rem 1rem;
 
             &>*{
-                margin: 1rem 2rem;
+                margin: 2rem 0;
+                // border: 1px dashed;
             }
-            
-            img{
-                margin: 1rem 0 0;
-                width: 90%;
-                // margin: 1rem auto 4rem;
 
-                margin-bottom: 2rem;
+            img{
+                margin-bottom: .7rem;
+                width: 90%;
             }
             
             h2{
                 font-size: 1.2rem;
+                margin: 1rem 0;
             }
+            
             p{
+                margin: 1rem 0;
                 font-size: .88rem;
                 line-height: 1.4rem;
                 color: $nuteC;
@@ -153,12 +154,17 @@ main{
     }
 
     .card.cardCta{
-        padding: 2rem 0;
+        padding: 1.5rem 0;
+
+        &>*{
+            margin: 1rem;
+        }
         
         h2{
             font-size: 1.1rem;
-            margin-right: 0;
-            margin-left: 0;
+            // margin-right: 0;
+            // margin-left: 0;
+            // margin: .5rem;
             line-height: 1.5rem;
         }
 
@@ -176,4 +182,11 @@ main{
 footer{
     background-color: $nuteB;
     color: $nuteA;
+    padding: 7.5rem 0 0;
+
+    .logoFooter{
+        color: $nuteA;
+        width: 10rem;;
+    }
+    
 }

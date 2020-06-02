@@ -109,37 +109,40 @@ main .cardContainer .card {
           box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
   text-align: center;
   overflow: hidden;
-  padding: 1rem 0;
+  padding: 2rem 2.5rem 1rem;
 }
 
 main .cardContainer .card > * {
-  margin: 1rem 2rem;
+  margin: 2rem 0;
 }
 
 main .cardContainer .card img {
-  margin: 1rem 0 0;
+  margin-bottom: .7rem;
   width: 90%;
-  margin-bottom: 2rem;
 }
 
 main .cardContainer .card h2 {
   font-size: 1.2rem;
+  margin: 1rem 0;
 }
 
 main .cardContainer .card p {
+  margin: 1rem 0;
   font-size: .88rem;
   line-height: 1.4rem;
   color: #808d99;
 }
 
 main .card.cardCta {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
+}
+
+main .card.cardCta > * {
+  margin: 1rem;
 }
 
 main .card.cardCta h2 {
   font-size: 1.1rem;
-  margin-right: 0;
-  margin-left: 0;
   line-height: 1.5rem;
 }
 
@@ -153,5 +156,11 @@ main .card.cardCta button {
 footer {
   background-color: #00252e;
   color: #ebfbff;
+  padding: 7.5rem 0 0;
+}
+
+footer .logoFooter {
+  color: #ebfbff;
+  width: 10rem;
 }
 /*# sourceMappingURL=style.css.map */
