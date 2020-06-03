@@ -4,6 +4,23 @@ $nuteB: #00252e;
 $nuteC: #808d99;
 
 
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+
+
 *{   
     /* ------------- Resetting css ------------- */
     margin: 0;
@@ -20,12 +37,16 @@ body{
 }
 
 h1,h2{
-    font-family: 'Poppins';
+    font-family: 'Poppins',sans-serif;
     font-weight: 600;
 }
 
 h1{
     font-size: 1.5rem;
+    @include desktop(){
+        font-size: 2.5rem;
+        color: $nuteB;
+    }
 }
 
 h2{
@@ -33,9 +54,13 @@ h2{
 }
 
 p{
-    font-family: 'Open Sans';
+    font-family: 'Open Sans',sans-serif;
     font-size: 1rem;
     font-weight: 400;
+    color: $nuteB;
+    @include desktop(){
+        font-size: 1.2rem;
+    }
 }
 
 ul{
@@ -44,6 +69,10 @@ ul{
 
 .wrap{
     padding: 1rem 1rem;
+
+    @include desktop {
+        padding: 2rem 4rem;
+    }
 }
 
 .imgContainer img{
@@ -54,26 +83,40 @@ img{
 }
 
 button{
+    box-shadow: -5px 5px 5px rgba(0,0,0,0.06);
     border: none;
     font-size: .65rem;
     font-family: 'Open Sans';
     font-weight: 700;
     letter-spacing: .5px;
     padding: .4rem 1.6rem;
-    border-radius: 2rem;
+    border-radius: 5rem;
     background-color: #fff;
     color: $nuteB;
+
+    @include desktop(){
+        font-size: .9rem;
+        padding: .8em 3em;
+    }
 }
 
 
 // Layout
 
 .logo{
-    width: 6.2rem;
+    height: 1rem;
+
+        @include desktop(){
+            height: 2rem;
+        }
+    
 }
 
 header{
     background-color: $nuteA;
+    @include desktop(){
+        min-height: 90vh ;
+    }
     // padding-top: 1rem;
 
     nav{
@@ -81,20 +124,40 @@ header{
         justify-content: space-between;
         align-items: center;
         margin: 1rem 0 4.5rem;
+        @include desktop(){
+            margin-bottom: 0rem;
+        }
     }
 
     section.intro{
         padding: 0 1rem;
         text-align: center;
 
+        @include desktop(){
+            display: flex;
+            justify-content: space-between;
+            // align-items: flex-end;
+        }
+        
         &>*{
             margin-top: 4rem;
+            text-align: left;
+            // flex: 1;
         }
 
+        .coverImg{
+            flex: 0 0 50%;
+        }
+        
         .introText{
-
             padding: 0 .2rem;
+            flex: 0 0 44%;
+            align-self: center;
 
+            h1{
+                max-width: 30rem;
+            }
+            
             &>*{
                 margin-top: 2rem;;
 
@@ -106,6 +169,10 @@ header{
                 padding: .7rem 3rem;
                 background-color: $prime;
                 color: white;
+                @include desktop(){
+                    font-size: 1.2rem;
+                    padding: 1.5rem 4rem;
+                }
                 }
                 
         }
@@ -118,6 +185,10 @@ header{
 main{
     .cardContainer{
         
+        .card:nth-child(2n+1){
+            flex-direction: row-reverse;
+        }
+
         .card{
             border-radius: 1rem;
             margin:2.5rem 0;
@@ -125,10 +196,23 @@ main{
             text-align: center;
             overflow: hidden; 
             // padding-bottom: 1rem;
-            padding: 2rem 2.5rem 1rem;
+            padding: 2rem 2.5rem 0;
+            background-color: white;
+
+            @include desktop(){
+                display: flex;
+                justify-content: space-between;
+                padding: 2rem 2rem 2rem 8rem;
+                text-align: left;
+                align-items: center;
+                  
+            }
 
             &>*{
                 margin: 2rem 0;
+                @include desktop(){
+                    flex: 0 0 46%;
+                }
                 // border: 1px dashed;
             }
 
@@ -140,6 +224,9 @@ main{
             h2{
                 font-size: 1.2rem;
                 margin: 1rem 0;
+                @include desktop(){
+                    font-size: 2rem;
+                }
             }
             
             p{
@@ -147,6 +234,10 @@ main{
                 font-size: .88rem;
                 line-height: 1.4rem;
                 color: $nuteC;
+                @include desktop(){
+                    font-size: 1.2rem;
+                    line-height: 1.8rem;
+                }
             }
             
         }
@@ -154,10 +245,24 @@ main{
     }
 
     .card.cardCta{
-        padding: 1.5rem 0;
+        padding: 1.7rem 0;
+        margin: 0 auto;
+        transform: translateY(6rem);
+        max-width: 50rem;
 
+        // z-index: 10;
+        // position: relative;
+        // top: 5rem;
+        @include desktop(){
+            
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+                
+        }
+        
         &>*{
-            margin: 1rem;
+            margin: .6rem;
         }
         
         h2{
@@ -166,6 +271,10 @@ main{
             // margin-left: 0;
             // margin: .5rem;
             line-height: 1.5rem;
+            @include desktop(){
+                font-size: 2rem;
+                margin: 2rem 0;
+            }
         }
 
         button{
@@ -173,6 +282,10 @@ main{
             color: $nuteA;
             font-size: .65rem;
             padding: .8rem 2.5rem;
+            @include desktop(){
+                font-size: 1.2rem;
+                padding: 1.2rem 4rem;
+            }
         }
 
     }
@@ -181,12 +294,117 @@ main{
 
 footer{
     background-color: $nuteB;
-    color: $nuteA;
-    padding: 7.5rem 0 0;
+    padding: 7.5rem 0 4rem;
+    
+    p,a{
+        color: $nuteA;
+    }
 
+    .attribution{
+        font-size: .7rem;
+        text-align: center;
+            @include desktop(){
+                    font-size: 1rem;
+                    color: $nuteA;
+                    text-decoration: none;
+                }
+            a{
+                text-decoration: none;
+                color: $prime;
+            }
+    }
     .logoFooter{
         color: $nuteA;
-        width: 10rem;;
+        height: 1.7rem;
+        @include desktop(){
+            height:auto;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .copyright p{
+        text-align: center;
+        font-size: .7rem;
+        font-family: 'Open Sans';
+        color: $nuteA;
+        @include desktop(){
+            text-align: right;
+            font-size: .8rem;
+        }
     }
     
+}
+
+#footMenu{
+
+    @include desktop(){
+        display: flex;
+        .col.contact{
+            flex: 3;
+        }
+        
+        .col{
+            flex: 1;
+            padding-right: 6.5rem !important;
+        }
+    }
+
+    ul{
+        // overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    li{
+        display: inline-flex;
+        margin: .5rem 0;
+
+        &>*~*{
+            margin-left: 1rem;
+            margin-top: -.2rem;
+        }
+    }
+
+    .icon{
+        font-size: 1rem;
+        color: $nuteA;
+        // margin-right: 1rem;
+        // margin-top: .3rem;
+    }
+
+    .col{
+        margin: .5rem 0;
+    }
+
+    .contact{
+        margin-bottom: 2rem;
+        li{
+            margin: 1rem 0;
+        }
+    }
+
+    .social{
+        ul{
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 1rem;
+            li{
+                margin: 1rem;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                // line-height: 2rem;
+                // padding: 1rem;
+                border: 1px solid $nuteA;
+                border-radius: 50%;
+                @include desktop(){
+                    margin: .5rem;
+                }
+            }
+        }
+    }
+
+    
+
 }
