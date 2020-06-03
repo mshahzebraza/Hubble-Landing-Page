@@ -115,7 +115,8 @@ button{
 header{
     background-color: $nuteA;
     @include desktop(){
-        min-height: 90vh ;
+        // min-height: 90vh ;
+        padding-bottom: 3rem;
     }
     // padding-top: 1rem;
 
